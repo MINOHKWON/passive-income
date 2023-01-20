@@ -1,0 +1,62 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.8'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'io.passive'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation "org.springframework.boot:spring-boot-starter-data-jpa"			// Spring Data-JPA
+	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+	implementation "org.springframework:spring-context-support"						// Spring Content Support
+	implementation "io.jsonwebtoken:jjwt:0.9.1"										// Spring Json-Web-Token
+	implementation "org.springframework.boot:spring-boot-starter-log4j2";			// log4J2
+
+	implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+	implementation "io.springfox:springfox-swagger2:2.9.2"						    // Swagger2
+	implementation "io.springfox:springfox-swagger-ui:2.9.2"						// Swagger-UI
+
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+
+	implementation group: 'org.postgresql', name: 'postgresql', version: '42.2.23' // 추가
+	runtimeOnly 'org.postgresql:postgresql' // 추가
+}
+
+// logback Exclude
+configurations {
+	all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	}
+}
+
+jar {
+	baseName = 'passive-api'
+	manifest {
+		attributes  'Title': 'Passive income API', 'Version': 1.0, 'Main-Class': 'io.passive'
+	}
+	archiveName 'passive-api-1.0.jar'
+	from {
+		configurations.compile.collect {it.isDirectory()? it: zipTree(it)}
+	}
+}

@@ -1,0 +1,537 @@
+2023-01-20 16:47:21,856 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 3988 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 16:47:21,860 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 16:47:21,860 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 16:47:21,882 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 16:47:21,882 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 16:47:22,297 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 16:47:22,304 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2023-01-20 16:47:22,672 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 16:47:22,712 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 829 ms
+2023-01-20 16:47:23,048 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 16:47:23,052 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 16:47:23,232 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2ControllerMapping' defined in class path resource [springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+2023-01-20 16:47:23,234 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 16:47:23,244 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-20 16:47:23,260 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2ControllerMapping' defined in class path resource [springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at io.passive.api.ApiApplication.main(ApiApplication.java:9) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+Caused by: java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration.swagger2ControllerMapping(Swagger2DocumentationConfiguration.java:56) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$723eee0b.CGLIB$swagger2ControllerMapping$1(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$723eee0b$$FastClassBySpringCGLIB$$cdd59436.invoke(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.25.jar:5.3.25]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$723eee0b.swagger2ControllerMapping(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+Caused by: java.lang.ClassNotFoundException: springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_352]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:419) ~[?:1.8.0_352]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352) ~[?:1.8.0_352]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:352) ~[?:1.8.0_352]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration.swagger2ControllerMapping(Swagger2DocumentationConfiguration.java:56) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$723eee0b.CGLIB$swagger2ControllerMapping$1(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$723eee0b$$FastClassBySpringCGLIB$$cdd59436.invoke(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.25.jar:5.3.25]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$723eee0b.swagger2ControllerMapping(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+2023-01-20 16:48:15,886 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 4033 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 16:48:15,890 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 16:48:15,890 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 16:48:15,913 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 16:48:15,913 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 16:48:16,318 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 16:48:16,326 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-01-20 16:48:16,696 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 16:48:16,746 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 832 ms
+2023-01-20 16:48:17,079 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 16:48:17,084 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 16:48:17,265 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2ControllerMapping' defined in class path resource [springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+2023-01-20 16:48:17,266 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 16:48:17,277 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-20 16:48:17,291 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2ControllerMapping' defined in class path resource [springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at io.passive.api.ApiApplication.main(ApiApplication.java:9) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+Caused by: java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration.swagger2ControllerMapping(Swagger2DocumentationConfiguration.java:56) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1.CGLIB$swagger2ControllerMapping$0(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1$$FastClassBySpringCGLIB$$94b3ac0b.invoke(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.25.jar:5.3.25]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1.swagger2ControllerMapping(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+Caused by: java.lang.ClassNotFoundException: springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_352]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:419) ~[?:1.8.0_352]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352) ~[?:1.8.0_352]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:352) ~[?:1.8.0_352]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration.swagger2ControllerMapping(Swagger2DocumentationConfiguration.java:56) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1.CGLIB$swagger2ControllerMapping$0(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1$$FastClassBySpringCGLIB$$94b3ac0b.invoke(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.25.jar:5.3.25]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1.swagger2ControllerMapping(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+2023-01-20 16:49:54,985 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 4091 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 16:49:54,989 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 16:49:54,989 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 16:49:55,012 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 16:49:55,012 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 16:49:55,429 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 16:49:55,437 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-01-20 16:49:55,803 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 16:49:55,843 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 831 ms
+2023-01-20 16:49:56,184 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 16:49:56,189 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 16:49:56,366 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2ControllerMapping' defined in class path resource [springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+2023-01-20 16:49:56,367 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 16:49:56,377 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-20 16:49:56,392 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2ControllerMapping' defined in class path resource [springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at io.passive.api.ApiApplication.main(ApiApplication.java:9) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+Caused by: java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration.swagger2ControllerMapping(Swagger2DocumentationConfiguration.java:56) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1.CGLIB$swagger2ControllerMapping$0(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1$$FastClassBySpringCGLIB$$94b3ac0b.invoke(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.25.jar:5.3.25]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1.swagger2ControllerMapping(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+Caused by: java.lang.ClassNotFoundException: springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_352]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:419) ~[?:1.8.0_352]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352) ~[?:1.8.0_352]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:352) ~[?:1.8.0_352]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration.swagger2ControllerMapping(Swagger2DocumentationConfiguration.java:56) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1.CGLIB$swagger2ControllerMapping$0(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1$$FastClassBySpringCGLIB$$94b3ac0b.invoke(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.25.jar:5.3.25]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$c7d26c1.swagger2ControllerMapping(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+2023-01-20 17:00:11,952 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 4492 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 17:00:11,956 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 17:00:11,956 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 17:00:11,979 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 17:00:11,979 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 17:00:12,398 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 17:00:12,406 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2023-01-20 17:00:12,749 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 17:00:12,789 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 810 ms
+2023-01-20 17:00:13,108 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 17:00:13,113 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 17:00:13,288 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2ControllerMapping' defined in class path resource [springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+2023-01-20 17:00:13,289 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 17:00:13,300 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-20 17:00:13,315 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2ControllerMapping' defined in class path resource [springfox/documentation/swagger2/configuration/Swagger2DocumentationConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at io.passive.api.ApiApplication.main(ApiApplication.java:9) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.servlet.HandlerMapping]: Factory method 'swagger2ControllerMapping' threw exception; nested exception is java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+Caused by: java.lang.NoClassDefFoundError: springfox/documentation/spring/web/PropertySourcedRequestMappingHandlerMapping
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration.swagger2ControllerMapping(Swagger2DocumentationConfiguration.java:56) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$e821bc96.CGLIB$swagger2ControllerMapping$0(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$e821bc96$$FastClassBySpringCGLIB$$b11e0547.invoke(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.25.jar:5.3.25]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$e821bc96.swagger2ControllerMapping(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+Caused by: java.lang.ClassNotFoundException: springfox.documentation.spring.web.PropertySourcedRequestMappingHandlerMapping
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:387) ~[?:1.8.0_352]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:419) ~[?:1.8.0_352]
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:352) ~[?:1.8.0_352]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:352) ~[?:1.8.0_352]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration.swagger2ControllerMapping(Swagger2DocumentationConfiguration.java:56) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$e821bc96.CGLIB$swagger2ControllerMapping$0(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$e821bc96$$FastClassBySpringCGLIB$$b11e0547.invoke(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244) ~[spring-core-5.3.25.jar:5.3.25]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331) ~[spring-context-5.3.25.jar:5.3.25]
+	at springfox.documentation.swagger2.configuration.Swagger2DocumentationConfiguration$$EnhancerBySpringCGLIB$$e821bc96.swagger2ControllerMapping(<generated>) ~[springfox-swagger2-2.9.2.jar:null]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 24 more
+2023-01-20 17:01:23,029 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 4540 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 17:01:23,033 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 17:01:23,033 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 17:01:23,056 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 17:01:23,056 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 17:01:23,432 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 17:01:23,439 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-01-20 17:01:23,759 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 17:01:23,836 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 779 ms
+2023-01-20 17:01:24,172 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 17:01:24,177 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 17:01:24,411 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-01-20 17:01:24,486 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: 1add35d7-8a87-4e8e-be07-367b575ebab1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-01-20 17:01:24,548 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5bff9dbd, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c147776, org.springframework.security.web.context.SecurityContextPersistenceFilter@30326d41, org.springframework.security.web.header.HeaderWriterFilter@519d4f8f, org.springframework.security.web.csrf.CsrfFilter@b3e092f, org.springframework.security.web.authentication.logout.LogoutFilter@7ba785cd, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@1164b484, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@71977ce7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@72cfa165, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f6abfe5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f3facde, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@32b63e2a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7eaf6f1b, org.springframework.security.web.session.SessionManagementFilter@f6d27f9, org.springframework.security.web.access.ExceptionTranslationFilter@31e5e9ee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55d92e30]
+2023-01-20 17:01:24,617 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2023-01-20 17:01:24,650 INFO o.s.b.StartupInfoLogger [restartedMain] Started ApiApplication in 1.89 seconds (JVM running for 2.348)
+2023-01-20 17:01:48,606 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-01-20 17:01:48,607 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Completed initialization in 1 ms
+2023-01-20 17:11:45,919 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 17:11:47,713 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 4934 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 17:11:47,716 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 17:11:47,716 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 17:11:47,741 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 17:11:47,741 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 17:11:48,085 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 17:11:48,092 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2023-01-20 17:11:48,398 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 17:11:48,483 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 741 ms
+2023-01-20 17:11:48,826 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 17:11:48,831 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 17:11:49,067 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-01-20 17:11:49,138 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: fc2fe318-036a-44fb-b2cb-ca55e1bb8c73
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-01-20 17:11:49,192 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@233894fc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5fef657, org.springframework.security.web.context.SecurityContextPersistenceFilter@9326832, org.springframework.security.web.header.HeaderWriterFilter@3f86bad4, org.springframework.security.web.csrf.CsrfFilter@3ed69064, org.springframework.security.web.authentication.logout.LogoutFilter@38885dcb, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@547b666a, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@5dc90c59, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@395f2dce, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7286418f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@cd1fb50, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5406aee6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1056ea06, org.springframework.security.web.session.SessionManagementFilter@337aa877, org.springframework.security.web.access.ExceptionTranslationFilter@585d6fee, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@e95fc10]
+2023-01-20 17:11:49,255 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2023-01-20 17:11:49,264 WARN o.s.c.s.AbstractApplicationContext [restartedMain] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+2023-01-20 17:11:49,272 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 17:11:49,290 INFO o.s.b.a.l.ConditionEvaluationReportLoggingListener [restartedMain] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-01-20 17:11:49,305 ERROR o.s.b.SpringApplication [restartedMain] Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.NullPointerException
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:181) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356) ~[spring-context-5.3.25.jar:5.3.25]
+	at java.lang.Iterable.forEach(Iterable.java:75) ~[?:1.8.0_352]
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:935) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at io.passive.api.ApiApplication.main(ApiApplication.java:9) ~[main/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_352]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_352]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_352]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_352]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: java.lang.NullPointerException
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:112) ~[springfox-spi-2.9.2.jar:null]
+	at springfox.documentation.spi.service.contexts.Orderings$8.compare(Orderings.java:109) ~[springfox-spi-2.9.2.jar:null]
+	at com.google.common.collect.ComparatorOrdering.compare(ComparatorOrdering.java:37) ~[guava-20.0.jar:?]
+	at java.util.TimSort.countRunAndMakeAscending(TimSort.java:355) ~[?:1.8.0_352]
+	at java.util.TimSort.sort(TimSort.java:220) ~[?:1.8.0_352]
+	at java.util.Arrays.sort(Arrays.java:1438) ~[?:1.8.0_352]
+	at com.google.common.collect.Ordering.sortedCopy(Ordering.java:855) ~[guava-20.0.jar:?]
+	at springfox.documentation.spring.web.plugins.WebMvcRequestHandlerProvider.requestHandlers(WebMvcRequestHandlerProvider.java:57) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:138) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper$2.apply(DocumentationPluginsBootstrapper.java:135) ~[springfox-spring-web-2.9.2.jar:null]
+	at com.google.common.collect.Iterators$7.transform(Iterators.java:750) ~[guava-20.0.jar:?]
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47) ~[guava-20.0.jar:?]
+	at com.google.common.collect.TransformedIterator.next(TransformedIterator.java:47) ~[guava-20.0.jar:?]
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:52) ~[guava-20.0.jar:?]
+	at com.google.common.collect.MultitransformedIterator.hasNext(MultitransformedIterator.java:50) ~[guava-20.0.jar:?]
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:249) ~[guava-20.0.jar:?]
+	at com.google.common.collect.ImmutableList.copyOf(ImmutableList.java:209) ~[guava-20.0.jar:?]
+	at com.google.common.collect.FluentIterable.toList(FluentIterable.java:614) ~[guava-20.0.jar:?]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.defaultContextBuilder(DocumentationPluginsBootstrapper.java:111) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.buildContext(DocumentationPluginsBootstrapper.java:96) ~[springfox-spring-web-2.9.2.jar:null]
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:167) ~[springfox-spring-web-2.9.2.jar:null]
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178) ~[spring-context-5.3.25.jar:5.3.25]
+	... 19 more
+2023-01-20 17:11:55,827 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 4954 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 17:11:55,830 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 17:11:55,830 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 17:11:55,852 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 17:11:55,853 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 17:11:56,198 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 17:11:56,205 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2023-01-20 17:11:56,502 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 17:11:56,584 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 731 ms
+2023-01-20 17:11:56,898 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 17:11:56,903 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 17:11:57,131 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-01-20 17:11:57,204 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: fdfadeb0-5eca-4fb0-9c54-bb32594fa189
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-01-20 17:11:57,260 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@f26f008, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7242db50, org.springframework.security.web.context.SecurityContextPersistenceFilter@3797ae4d, org.springframework.security.web.header.HeaderWriterFilter@34d8e854, org.springframework.security.web.csrf.CsrfFilter@5983d10b, org.springframework.security.web.authentication.logout.LogoutFilter@6cd0704d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@507009ae, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2866b020, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@7040b82c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1f53644b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a41bd39, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5741d485, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5ca14145, org.springframework.security.web.session.SessionManagementFilter@6595ea98, org.springframework.security.web.access.ExceptionTranslationFilter@15ff2889, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@48d7cfea]
+2023-01-20 17:11:57,320 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2023-01-20 17:11:57,352 INFO o.s.b.StartupInfoLogger [restartedMain] Started ApiApplication in 1.773 seconds (JVM running for 2.181)
+2023-01-20 18:01:16,974 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 18:14:10,162 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 6839 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 18:14:10,166 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 18:14:10,166 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 18:14:10,191 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 18:14:10,191 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 18:14:10,601 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 18:14:10,609 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-01-20 18:14:10,929 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 18:14:11,017 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 826 ms
+2023-01-20 18:14:11,360 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 18:14:11,365 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 18:14:11,575 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-01-20 18:14:11,614 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: 38c421c9-7456-47ee-bdb7-97922b96a562
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-01-20 18:14:11,644 WARN o.s.s.c.a.w.b.WebSecurity [restartedMain] You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@37851b3b. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-20 18:14:11,645 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@37851b3b
+2023-01-20 18:14:11,661 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@41d63929, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f83aa9f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4cfe39ec, org.springframework.security.web.header.HeaderWriterFilter@ac33fc9, org.springframework.security.web.authentication.logout.LogoutFilter@3c0caaf2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4ecd81c4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56feab7c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7560b504, org.springframework.security.web.session.SessionManagementFilter@73405b62, org.springframework.security.web.access.ExceptionTranslationFilter@74cf4efa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4372d93c]
+2023-01-20 18:14:11,809 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2023-01-20 18:14:11,841 INFO o.s.b.StartupInfoLogger [restartedMain] Started ApiApplication in 1.965 seconds (JVM running for 2.575)
+2023-01-20 18:14:32,880 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-2] Initializing Servlet 'dispatcherServlet'
+2023-01-20 18:14:32,881 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-2] Completed initialization in 1 ms
+2023-01-20 18:15:25,492 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 18:15:27,257 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 6914 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 18:15:27,261 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 18:15:27,261 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 18:15:27,285 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 18:15:27,285 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 18:15:27,646 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 18:15:27,654 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-01-20 18:15:27,954 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 18:15:28,031 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 746 ms
+2023-01-20 18:15:28,334 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 18:15:28,338 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 18:15:28,543 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-01-20 18:15:28,580 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: 10448666-9cfb-4cbe-936a-bddd0120840d
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-01-20 18:15:28,608 WARN o.s.s.c.a.w.b.WebSecurity [restartedMain] You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@40394463. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-20 18:15:28,609 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@40394463
+2023-01-20 18:15:28,624 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@2144c93c, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@12ebe015, org.springframework.security.web.context.SecurityContextPersistenceFilter@2fc14975, org.springframework.security.web.header.HeaderWriterFilter@5f4e75d8, org.springframework.security.web.authentication.logout.LogoutFilter@5fafdbfe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1649ddff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7116fe16, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@34388f35, org.springframework.security.web.session.SessionManagementFilter@773ed432, org.springframework.security.web.access.ExceptionTranslationFilter@1d982084, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@63bf047f]
+2023-01-20 18:15:28,735 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2023-01-20 18:15:28,769 INFO o.s.b.StartupInfoLogger [restartedMain] Started ApiApplication in 1.775 seconds (JVM running for 2.214)
+2023-01-20 18:15:43,245 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-01-20 18:15:43,246 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Completed initialization in 1 ms
+2023-01-20 18:22:51,512 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 18:22:54,242 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 7175 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 18:22:54,247 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 18:22:54,247 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 18:22:54,271 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 18:22:54,271 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 18:22:54,627 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 18:22:54,633 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 2 ms. Found 0 JPA repository interfaces.
+2023-01-20 18:22:54,936 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 18:22:55,007 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 736 ms
+2023-01-20 18:22:55,307 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 18:22:55,311 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 18:22:55,504 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-01-20 18:22:55,540 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: 3382e9d2-370f-4e5c-a193-757f842af923
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-01-20 18:22:55,591 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7be25d1e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1a453e2f, org.springframework.security.web.context.SecurityContextPersistenceFilter@63a30314, org.springframework.security.web.header.HeaderWriterFilter@6af58caa, org.springframework.security.web.authentication.logout.LogoutFilter@354c6da2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5f58cb81, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2321da46, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5128c024, org.springframework.security.web.session.SessionManagementFilter@78d1745c, org.springframework.security.web.access.ExceptionTranslationFilter@1a9eb4eb, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1d217500]
+2023-01-20 18:22:55,596 WARN o.s.s.c.a.w.b.WebSecurity [restartedMain] You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@5c63ed91. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-20 18:22:55,596 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@5c63ed91
+2023-01-20 18:22:55,706 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2023-01-20 18:22:55,739 INFO o.s.b.StartupInfoLogger [restartedMain] Started ApiApplication in 1.827 seconds (JVM running for 2.463)
+2023-01-20 18:23:18,738 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-01-20 18:23:18,739 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Completed initialization in 1 ms
+2023-01-20 18:23:53,489 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 18:23:55,412 INFO o.s.b.StartupInfoLogger [restartedMain] Starting ApiApplication using Java 1.8.0_352 on gwonmin-oui-MacBookPro.local with PID 7227 (/Users/mokwon/Desktop/PassiveIncome/api/build/classes/java/main started by mokwon in /Users/mokwon/Desktop/PassiveIncome/api)
+2023-01-20 18:23:55,416 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.7.8, Spring v5.3.25
+2023-01-20 18:23:55,416 INFO o.s.b.SpringApplication [restartedMain] The following 1 profile is active: "local"
+2023-01-20 18:23:55,440 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-01-20 18:23:55,440 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-01-20 18:23:55,792 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-01-20 18:23:55,800 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2023-01-20 18:23:56,106 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8000 (http)
+2023-01-20 18:23:56,177 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 737 ms
+2023-01-20 18:23:56,481 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-01-20 18:23:56,486 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-01-20 18:23:56,676 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2023-01-20 18:23:56,718 WARN o.s.b.a.s.s.UserDetailsServiceAutoConfiguration [restartedMain] 
+
+Using generated security password: 56501281-6d01-427a-ae18-5fd73f1d48d1
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2023-01-20 18:23:56,765 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6ca084b6, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7463edf0, org.springframework.security.web.context.SecurityContextPersistenceFilter@53587898, org.springframework.security.web.header.HeaderWriterFilter@35ebff30, org.springframework.security.web.authentication.logout.LogoutFilter@7c1ec171, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3312345d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@603ccec1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6462376a, org.springframework.security.web.session.SessionManagementFilter@7f62adcc, org.springframework.security.web.access.ExceptionTranslationFilter@4e5d4f3d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@d180bea]
+2023-01-20 18:23:56,767 WARN o.s.s.c.a.w.b.WebSecurity [restartedMain] You are asking Spring Security to ignore org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@347c5a98. This is not recommended -- please use permitAll via HttpSecurity#authorizeHttpRequests instead.
+2023-01-20 18:23:56,767 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Will not secure org.springframework.boot.autoconfigure.security.servlet.StaticResourceRequest$StaticResourceRequestMatcher@347c5a98
+2023-01-20 18:23:56,884 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8000 (http) with context path ''
+2023-01-20 18:23:56,917 INFO o.s.b.StartupInfoLogger [restartedMain] Started ApiApplication in 1.776 seconds (JVM running for 2.211)
+2023-01-20 18:24:01,082 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Initializing Servlet 'dispatcherServlet'
+2023-01-20 18:24:01,083 INFO o.s.w.s.FrameworkServlet [http-nio-8000-exec-1] Completed initialization in 1 ms
+2023-01-20 18:24:52,492 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'

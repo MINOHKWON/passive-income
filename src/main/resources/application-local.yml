@@ -1,0 +1,40 @@
+
+# Server Config
+server:
+  port: 8000
+
+# Spring boot Config
+spring:
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/PASSIVE
+    username: mokwon
+    password: kk925146
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show_sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: PASSIVE
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    open-in-view: false
+
+# logging slf4j
+logging:
+  config: classpath:log4j2/log4j2-local.xml
+
+# front-service config
+front:
+  url: http://localhost:3000
+  apiKey: x-api-key
+  apiValue: 3oIQUB4Mbu93BorDT4bz36edJcEXXkcUdjIrfnv5
