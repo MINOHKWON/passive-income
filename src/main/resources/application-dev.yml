@@ -1,0 +1,43 @@
+
+# Spring boot Config
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  # Postgres Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/postgres
+    username: passive
+    password: passive1004#
+
+  # Swagger 오류
+  mvc:
+    path match:
+      matching-strategy: ant_path_matcher
+
+  # JPA
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show_sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        default_schema: public
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+    open-in-view: false
+
+# logging slf4j
+logging:
+  config: classpath:log4j2/log4j2-dev.xml
+
+# front-service config
+front:
+  url: http://localhost:3000
+  apiKey: x-api-key
+  apiValue: 3oIQUB4Mbu93BorDT4bz36edJcEXXkcUdjIrfnv5

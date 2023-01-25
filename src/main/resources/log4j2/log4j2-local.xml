@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+
+	<!--  파일정보 -->
+    <Properties>
+    	<Property name="infoLogNm">./logs/api-service/api_info.log</Property>
+    	<Property name="errorLogNm">./logs/api-service/api_error.log</Property>
+    	<Property name="authLogNm">./logs/api-service/api_auth.log</Property>
+    	<Property name="jsonInfoLogNm">./logs/api-service/api_json_info.log</Property>
+        <Property name="layoutPattern">%style{%d{UTF-8}}{black} %highlight{%-5level} [%style{%t}{bright,blue}] %style{%C}{bright,yellow}: %msg%n%throwable</Property>
+    </Properties>
+
+	<!-- 생성 파일 정보 -->
+    <Appenders>
+    
+        <Console name="Console_Appender" target="SYSTEM_OUT" >
+            <PatternLayout pattern="${layoutPattern}"/>
+        </Console>
+		
+		<!-- info level -->
+		<File name="File_Info_Appender">
+			<fileName>${infoLogNm}</fileName>
+			<PatternLayout>
+                <pattern>%d %p %C{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+		</File>
+		
+		<!-- error level -->
+		<File name="File_Error_Appender">
+			<fileName>${errorLogNm}</fileName>
+			<PatternLayout>
+                <pattern>%d %p %C{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+		</File>
+		
+		<!-- auth management -->
+		<File name="File_Auth_Appender">
+			<fileName>${authLogNm}</fileName>
+			<PatternLayout>
+                <pattern>%d %p %C{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+		</File>
+		
+		<!-- json api info -->
+		<File name="File_Json_info_Appender">
+			<fileName>${jsonInfoLogNm}</fileName>
+			<PatternLayout>
+                <pattern>%d %p %C{1.} [%t] %m%n</pattern>
+            </PatternLayout>
+		</File>
+    </Appenders>
+  
+	<!-- 로그 범위  -->
+    <Loggers>
+		
+		<!-- Spring 관련 로그  -->
+		<Logger name="org.springframework" additivity="false" level="INFO">
+            <AppenderRef ref="Console_Appender" />
+            <AppenderRef ref="File_Info_Appender"/>
+            <AppenderRef ref="File_Error_Appender"/>
+		</Logger>
+		
+		<!-- 프로젝트 로그 -->
+		<logger name="io.passive.api" additivity="false" level="DEBUG">
+            <AppenderRef ref="Console_Appender" />
+            <AppenderRef ref="File_Info_Appender"/>
+            <AppenderRef ref="File_Error_Appender"/>
+		</logger>
+		
+	    <!-- Hibenate 관련 세팅 -->
+		<Logger name="org.hibernate.engine" additivity="false" level="INFO">
+			<AppenderRef ref="Console_Appender" />
+			<AppenderRef ref="File_Info_Appender"/>
+           	<AppenderRef ref="File_Error_Appender"/>
+	    </Logger>
+		<Logger name="org.hibernate.resource" additivity="false" level="DEBUG">
+          	<AppenderRef ref="Console_Appender" />
+          	<AppenderRef ref="File_Info_Appender"/>
+           	<AppenderRef ref="File_Error_Appender"/>
+	    </Logger>
+	    
+	    <!-- Hibernate SQL 로그 -->
+	    <Logger name="org.hibernate.SQL" additivity="false" level="TRACE">
+			<AppenderRef ref="Console_Appender" />
+           	<AppenderRef ref="File_Info_Appender"/>
+           	<AppenderRef ref="File_Error_Appender"/>
+	    </Logger>
+	    
+	    <!-- Hibernate 파라미터 로그 -->
+		<Logger name="org.hibernate.type.descriptor.sql.BasicBinder" additivity="false" level="TRACE">
+          	<AppenderRef ref="Console_Appender" />
+           	<AppenderRef ref="File_Info_Appender"/>
+           	<AppenderRef ref="File_Error_Appender"/>
+       </Logger>
+       
+		<!-- 추후 AUTH 관련 로그  -->
+		<logger name="io.passive.api.common.filter" additivity="false" level="INFO">
+           	<AppenderRef ref="Console_Appender" />
+           	<AppenderRef ref="File_Info_Appender"/>
+           	<AppenderRef ref="File_Error_Appender"/>
+		</logger>
+		
+		<!-- Default 세팅 -->
+	    <root additivity="false" level="OFF">
+           	<AppenderRef ref="Console_Appender" />
+		</root>
+    </Loggers>
+</Configuration>
