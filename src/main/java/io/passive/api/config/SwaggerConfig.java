@@ -18,8 +18,8 @@ public class SwaggerConfig {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.passive")) // 현재 RequestMapping으로 할당된 모든 URL 리스트를 추출
-                .paths(PathSelectors.ant("/api/**"))            // 그중 /api/** 인 URL들만 필터링
+                .apis(RequestHandlerSelectors.basePackage("io.passive")) // 현재 RequestMapping으로 할당된 모든 URL 리스트를 추출
+                .paths(PathSelectors.ant("/api/**")) // 그중 /api/** 인 URL들만 필터링
                 .build();
     }
 

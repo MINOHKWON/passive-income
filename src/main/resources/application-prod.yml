@@ -32,6 +32,11 @@ spring:
             non_contextual_creation: true
     open-in-view: false
 
+# redis
+redis:
+  host: localhost
+  port: 6379
+
 # logging slf4j
 logging:
   config: classpath:log4j2/log4j2-prod.xml

@@ -1,7 +1,6 @@
 package io.passive.api.filter;
 
 import lombok.extern.log4j.Log4j2;
-
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
