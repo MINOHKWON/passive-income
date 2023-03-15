@@ -11,6 +11,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.lettuce.core.dynamic.annotation.Key;
 import io.passive.api.common.AuthConstants;
+import io.passive.api.model.UserVO;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import lombok.extern.log4j.Log4j2;
@@ -29,12 +30,12 @@ import java.util.stream.Collectors;
 
 @RequiredArgsConstructor
 @Log4j2
-public class TokenUtils {
+public class JwtUtils {
     private static final String secretKey = "ii";
 
     public static String generateJwtToken(UserVO user) {
         JwtBuilder builder = Jwts.builder()
-         .setSubject(String.valueOf(user.getUserSq()))
+         .setSubject(String.valueOf(user.getUserId()))
          .setHeader(createHeader())
          .setClaims(createClaims(user))
          .setExpiration(createExpireDate())
@@ -116,7 +117,7 @@ public class TokenUtils {
         UserDetails userDetails = new User(
             String.valueOf(getUserIdFromToken(token)),
             "1234",
-            Arrays.asList("ADMIN").stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList())
+            Arrays.asList("ROLE_ADMIN").stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList())
         );
 
         Authentication auth = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
